@@ -19,7 +19,7 @@
 <meta name="twitter:card" content="summary">
 
 
-<link rel="icon" href="/img/avatar.jpg">
+<link rel="icon" href="/img/avatar.webp">
 
 <link href="/css/style.css?v=1.1.0" rel="stylesheet">
 
@@ -59,7 +59,7 @@
         <a href="/"
    class="avatar_target">
     <img class="avatar"
-         src="/img/avatar.jpg"/>
+         src="/img/avatar.webp"/>
 </a>
 <div class="author">
     <span>轻月影</span>
@@ -166,6 +166,8 @@
             <li><a target="_blank" href="https://github.com/">Github</a></li>
             
             <li><a target="_blank" href="https://hexo.io/zh-cn/">hexo</a></li>
+            
+            <li><a target="_blank" href="https://vercel.com/">vercel</a></li>
             
         </ul>
     </div>
@@ -298,22 +300,6 @@
 </article>
 
 
-<p>
-    <a  class="dashang" onclick="dashangToggle()">赏</a>
-</p>
-
-
-<div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>Hello World</p>
-    
-    <p><span class="copy-title">本文作者:</span><a  title="轻月影">轻月影</a></p>
-    <p><span class="copy-title">发布时间:</span>2024-07-28, 20:19:26</p>
-    <p><span class="copy-title">最后更新:</span>2024-07-28, 20:14:05</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2024/07/28/hello-world/" title="Hello World">https://iyfei.cn/2024/07/28/hello-world/</a>
-    <p>
-        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">&#34;署名-非商用-相同方式共享 4.0&#34;</a> 转载请保留原文链接及作者。
-    </p>
-</div>
 
 
 
@@ -327,7 +313,7 @@
     </div>
     <div class="copyright">
         <p class="footer-entry"><span class="miit">
-                <img src="/img/gov.png" title="中华人民共和国工业和信息化部">
+                <img src="/img/gov.webp" title="中华人民共和国工业和信息化部">
                 <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">豫ICP备2021028418号-1</a>
         </span>
     
@@ -343,24 +329,6 @@
     </div>
 </div>
 
-<div class="hide_box" onclick="dashangToggle()"></div>
-<div class="shang_box">
-    <a class="shang_close"  onclick="dashangToggle()">×</a>
-    <div class="shang_tit">
-        <p>喜欢就点赞,疼爱就打赏</p>
-    </div>
-    <div class="shang_payimg">
-        <div class="pay_img">
-            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
-            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
-        </div>
-    </div>
-    <div class="shang_payselect">
-        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
-    </div>
-</div>
-
-
 </body>
 <script src="/js/jquery.pjax.js?v=1.1.0" ></script>
 
@@ -374,14 +342,6 @@
         
 
         /*渲染打赏样式*/
-        
-        $("input[name=pay]").on("click", function () {
-            if($("input[name=pay]:checked").val()=="weixin"){
-                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
-            } else {
-                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
-            }
-        })
         
 
         /*高亮代码块行号*/
@@ -400,11 +360,6 @@
     }
 
     /*打赏页面隐藏与展示*/
-    
-    function dashangToggle() {
-        $(".shang_box").fadeToggle();
-        $(".hide_box").fadeToggle();
-    }
     
 
 </script>
@@ -476,6 +431,24 @@
     
 
     /*列表样式*/
+    
+    #post .pjax article .article-entry>ol, #post .pjax article .article-entry>ul, #post .pjax article>ol, #post .pjax article>ul{
+        border: #e2dede solid 1px;
+        border-radius: 10px;
+        padding: 10px 32px 10px 56px;
+    }
+    #post .pjax article .article-entry li>ol, #post .pjax article .article-entry li>ul,#post .pjax article li>ol, #post .pjax article li>ul{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    #post .pjax article .article-entry>ol>li, #post .pjax article .article-entry>ul>li,#post .pjax article>ol>li, #post .pjax article>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    #post .pjax article .article-entry li>ol>li, #post .pjax article .article-entry li>ul>li,#post .pjax article li>ol>li, #post .pjax article li>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
     
 
     /* 背景图样式 */
